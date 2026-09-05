@@ -199,8 +199,8 @@ registerForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         return;
     }
-    if (lastName.length < 2) {
-        alert("Last name must contain at least 2 characters.");
+    if (lastName.length < 1) {
+        alert("Last name must contain at least 1 characters.");
         event.preventDefault();
         return;
     }
