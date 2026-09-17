@@ -1,28 +1,519 @@
-<html>
-    <head>
-        <title>Course Registration System</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
 
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-        <header class="header">
-            <h1>Welcome to Mentora</h1>
-        </header>
-        <div class="container">
-    <div class="card-login">
-        <h2>Select Your Role</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <a href="{{url_for('student')}}">
-            <button>Student</button>
-        </a>
+    <title>Mentora | Learn. Grow. Achieve.</title>
 
-        <a href="{{url_for('admin')}}">
-            <button>Admin</button>
-        </a>
-    </div>
-</div>
-    </div>
-    </body>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            MENTORA
+        </div>
+
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#roles">Get Started</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                AI-POWERED LEARNING PLATFORM
+            </p>
+
+            <h1>
+                Learn Smarter.<br>
+                Find the Right Mentor.
+            </h1>
+
+            <p class="hero-text">
+                Mentora combines personalized learning paths, expert
+                tutoring, intelligent recommendations, and AI-powered
+                course assistance in one learning ecosystem.
+            </p>
+
+            <a href="#roles" class="hero-button">
+                Get Started →
+            </a>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="learning-card">
+
+                <div class="card-top">
+                    <span>YOUR LEARNING JOURNEY</span>
+                    <span>✦</span>
+                </div>
+
+                <div class="journey">
+
+                    <div class="journey-item active">
+                        <span>01</span>
+                        <div>
+                            <strong>Set Your Goal</strong>
+                            <small>Tell us what you want to learn</small>
+                        </div>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="journey-item active">
+                        <span>02</span>
+                        <div>
+                            <strong>AI Assessment</strong>
+                            <small>Understand your current skills</small>
+                        </div>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="journey-item">
+                        <span>03</span>
+                        <div>
+                            <strong>Personalized Path</strong>
+                            <small>Get courses and mentors for you</small>
+                        </div>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="journey-item">
+                        <span>04</span>
+                        <div>
+                            <strong>Learn & Improve</strong>
+                            <small>Track your progress continuously</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="intro">
+
+        <p class="section-label">
+            WHY MENTORA?
+        </p>
+
+        <h2>
+            Learning is more than<br>
+            just watching a course.
+        </h2>
+
+        <p>
+            Instead of simply helping you find a course, Mentora helps
+            you understand what you need to learn, how you should learn
+            it, and when you need human guidance.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                WHAT MENTORA OFFERS
+            </p>
+
+            <h2>
+                Everything you need<br>
+                to keep learning.
+            </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <!-- Feature 1 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Recommendations
+                </h3>
+
+                <p>
+                    Receive personalized course and tutor recommendations
+                    based on your goals, interests, skills, learning history,
+                    ratings and preferences.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 2 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Structured Courses
+                </h3>
+
+                <p>
+                    Learn through organized modules, lessons, quizzes,
+                    assignments, PDFs, videos and other course materials.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Course AI
+                </h3>
+
+                <p>
+                    Ask questions about your course material and receive
+                    context-aware answers powered by retrieval-augmented
+                    generation.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 4 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Expert Tutors
+                </h3>
+
+                <p>
+                    Find tutors based on subject, expertise, experience,
+                    ratings, price, availability and teaching preferences.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 5 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Personalized Learning
+                </h3>
+
+                <p>
+                    Define your learning goal and get a personalized
+                    roadmap based on your current skills and learning gaps.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 6 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Progress Tracking
+                </h3>
+
+                <p>
+                    Track lesson completion and quiz performance while
+                    identifying areas where additional learning or tutoring
+                    may help.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-it-works" id="how-it-works">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                HOW IT WORKS
+            </p>
+
+            <h2>
+                Your learning journey,<br>
+                made personal.
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Set Your Goal</h3>
+                <p>
+                    Tell Mentora what you want to learn or achieve.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Assess</h3>
+                <p>
+                    Understand your current knowledge and identify skill gaps.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Get Your Path</h3>
+                <p>
+                    Receive recommended courses and suitable tutors.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Learn</h3>
+                <p>
+                    Study course materials and use Course AI when you need help.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <div class="step-number">05</div>
+                <h3>Improve</h3>
+                <p>
+                    Track your progress, identify weak areas and get human
+                    guidance when needed.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= AI + HUMAN SECTION ================= -->
+
+    <section class="connection">
+
+        <div class="connection-content">
+
+            <p class="section-label">
+                AI + HUMAN EXPERTISE
+            </p>
+
+            <h2>
+                When AI isn't enough,<br>
+                find a human mentor.
+            </h2>
+
+            <p>
+                Mentora bridges the gap between AI assistance and human
+                tutoring. Learn independently with Course AI, or connect
+                with an expert when you need personalized guidance.
+            </p>
+
+            <div class="connection-points">
+
+                <div>
+                    <span>✓</span>
+                    AI-powered course assistance
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Personalized recommendations
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    One-to-one tutoring
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ROLE SELECTION ================= -->
+
+    <section class="roles" id="roles">
+
+        <p class="section-label">
+            GET STARTED
+        </p>
+
+        <h2>
+            Choose your role
+        </h2>
+
+        <p class="roles-subtitle">
+            Start your journey with Mentora.
+        </p>
+
+
+        <div class="role-container">
+
+
+            <!-- STUDENT -->
+
+            <a href="{{ url_for('student') }}" class="role-card">
+
+                <div class="role-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Student
+                </h3>
+
+                <p>
+                    Discover courses, find mentors, learn with AI
+                    and track your progress.
+                </p>
+
+                <span>
+                    Continue →
+                </span>
+
+            </a>
+
+
+            <!-- TUTOR -->
+
+            <a href="{{ url_for('tutor') }}" class="role-card">
+
+                <div class="role-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Tutor
+                </h3>
+
+                <p>
+                    Share your expertise, create courses, teach students
+                    and manage your tutoring sessions.
+                </p>
+
+                <span>
+                    Continue →
+                </span>
+
+            </a>
+
+
+            <!-- ADMIN -->
+
+            <a href="{{ url_for('admin') }}" class="role-card">
+
+                <div class="role-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Admin
+                </h3>
+
+                <p>
+                    Manage students, tutors, courses, payments,
+                    reports and platform activity.
+                </p>
+
+                <span>
+                    Continue →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            MENTORA
+        </div>
+
+        <p>
+            Learn • Connect • Achieve
+        </p>
+
+        <p class="copyright">
+            © 2026 Mentora. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
 </html>
+```

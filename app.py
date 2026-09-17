@@ -69,5 +69,10 @@ def admin():
 def dashboard():
     return render_template('dashboard.html')    
 
+
+@app.route('/tutor')
+def tutor():
+    return render_template('tutor.html')
+
 if __name__ =='__main__':
     app.run(debug=True)

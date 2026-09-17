@@ -430,3 +430,760 @@ form{
     }
 
 }
+
+/* =========================================================
+   MENTORA - MAIN STYLESHEET
+   ========================================================= */
+
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8fafc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e8edf4;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #173f7a;
+}
+
+.header nav {
+    display: flex;
+    gap: 35px;
+}
+
+.header nav a {
+    font-size: 15px;
+    color: #536176;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.header nav a:hover {
+    color: #173f7a;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+    padding: 90px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+
+    background: #eef5ff;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-heading {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #e67e22;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: #142d50;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 560px;
+    font-size: 18px;
+    color: #5b687b;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 27px;
+
+    background: #173f7a;
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+.hero-button:hover {
+    background: #102f5d;
+    transform: translateY(-2px);
+}
+
+
+/* ================= HERO LEARNING CARD ================= */
+
+.hero-visual {
+    width: 470px;
+}
+
+.learning-card {
+    background: white;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: 0 18px 50px rgba(29, 55, 90, 0.12);
+
+    border: 1px solid #e1e8f2;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    color: #718096;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.card-top span:last-child {
+    font-size: 22px;
+    color: #e67e22;
+}
+
+
+/* ================= JOURNEY ================= */
+
+.journey {
+    padding-top: 20px;
+}
+
+.journey-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 9px 0;
+}
+
+.journey-item > span {
+    min-width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #edf2f8;
+    color: #728096;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.journey-item.active > span {
+    background: #173f7a;
+    color: white;
+}
+
+.journey-item strong {
+    display: block;
+
+    font-size: 15px;
+    color: #26364c;
+}
+
+.journey-item small {
+    display: block;
+
+    font-size: 12px;
+    color: #8490a1;
+}
+
+.line {
+    width: 1px;
+    height: 20px;
+
+    background: #dce3ec;
+
+    margin-left: 19px;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro {
+    max-width: 800px;
+
+    margin: auto;
+    padding: 100px 25px;
+
+    text-align: center;
+}
+
+.section-label {
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #e67e22;
+
+    margin-bottom: 15px;
+}
+
+.intro h2,
+.section-heading h2,
+.how-it-works h2,
+.connection h2,
+.roles h2 {
+    font-size: 39px;
+    line-height: 1.2;
+
+    color: #142d50;
+
+    letter-spacing: -0.5px;
+}
+
+.intro > p:last-child {
+    max-width: 680px;
+
+    margin: 25px auto 0;
+
+    color: #687588;
+    font-size: 17px;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 90px 8%;
+    background: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.feature-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5ebf3;
+    border-radius: 12px;
+
+    transition: 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    background: white;
+
+    box-shadow: 0 12px 30px rgba(35, 58, 88, 0.09);
+
+    border-color: #cbd8e8;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2ff;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #203653;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #707d8f;
+
+    font-size: 14px;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.how-it-works {
+    padding: 100px 8%;
+
+    background: #f4f7fb;
+}
+
+.steps {
+    max-width: 1100px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+.step {
+    position: relative;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    border: 1px solid #e3e9f1;
+}
+
+.step-number {
+    font-size: 12px;
+    font-weight: 800;
+
+    color: #e67e22;
+
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 17px;
+
+    color: #243b5a;
+
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 13px;
+
+    color: #758194;
+}
+
+
+/* ================= AI + HUMAN ================= */
+
+.connection {
+    padding: 100px 8%;
+
+    background: #173f7a;
+
+    color: white;
+}
+
+.connection-content {
+    max-width: 850px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.connection .section-label {
+    color: #ffb66b;
+}
+
+.connection h2 {
+    color: white;
+}
+
+.connection-content > p:not(.section-label) {
+    max-width: 680px;
+
+    margin: 25px auto;
+
+    color: #d9e5f5;
+
+    font-size: 16px;
+}
+
+.connection-points {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.connection-points div {
+    font-size: 14px;
+    color: #edf4fc;
+}
+
+.connection-points span {
+    color: #ffb66b;
+    font-weight: bold;
+
+    margin-right: 6px;
+}
+
+
+/* ================= ROLES ================= */
+
+.roles {
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.roles-subtitle {
+    color: #748094;
+
+    margin-top: 12px;
+}
+
+.role-container {
+    max-width: 1000px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================= ROLE CARD ================= */
+
+.role-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 35px 30px;
+
+    min-height: 290px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e0e7f0;
+
+    border-radius: 13px;
+
+    transition: 0.25s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+
+    background: white;
+
+    border-color: #c7d5e7;
+
+    box-shadow: 0 15px 35px rgba(30, 55, 90, 0.10);
+}
+
+.role-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2ff;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.role-card h3 {
+    font-size: 21px;
+
+    color: #203653;
+
+    margin-bottom: 12px;
+}
+
+.role-card p {
+    color: #748094;
+
+    font-size: 14px;
+
+    max-width: 250px;
+
+    margin-bottom: 20px;
+}
+
+.role-card span {
+    margin-top: auto;
+
+    color: #173f7a;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.role-card:hover span {
+    color: #e67e22;
+}
+
+
+/* ================= COMING SOON ================= */
+
+.role-card .coming-soon {
+    color: #8a94a4;
+
+    font-size: 13px;
+
+    background: #edf0f4;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #122c4d;
+
+    color: #dce6f2;
+}
+
+.footer-logo {
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 15px;
+
+    color: #8fa1b6;
+
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .role-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .header nav {
+        gap: 15px;
+    }
+
+    .header nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 70px 5%;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 470px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .role-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .how-it-works h2,
+    .connection h2,
+    .roles h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .header {
+        height: auto;
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .header nav {
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .learning-card {
+        padding: 22px;
+    }
+
+    .connection-points {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
