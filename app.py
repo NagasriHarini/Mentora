@@ -39,53 +39,6 @@ def student_register():
 
     return "Registration successful"
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-
-    if request.method == 'POST':
-
-        data = request.get_json()
-
-        student_id = login_student(data)
-
-        if student_id:
-            return jsonify({
-                "success": True,
-                "message": "Login successful!",
-                "redirect": "/dashboard"
-            })
-
-        return jsonify({
-            "success": False,
-            "message": "Invalid Student ID or password."
-        })
-
-    return render_template('login.html')
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-
-    if request.method == 'POST':
-
-        data = request.get_json()
-
-        student_id = register_student(data)
-
-        return jsonify({
-            "success": True,
-            "message": "Registration successful!",
-            "redirect": f"/registration-success/{student_id}"
-        })
-
-    return render_template('register.html')
-
-@app.route('/registration-success/<int:student_id>')
-def registration_success(student_id):
-
-    return render_template(
-        'registration_success.html',
-        student_id=student_id
-    )
 
 
 @app.route('/Admin')
