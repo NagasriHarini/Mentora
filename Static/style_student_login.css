@@ -1,0 +1,611 @@
+
+/* =========================================================
+   MENTORA - STUDENT LOGIN / REGISTER
+   ========================================================= */
+
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5f0;
+    color: #1d1d1b;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #f7f5f0;
+    border-bottom: 1px solid #dedbd4;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #1d1d1b;
+}
+
+.header nav {
+    display: flex;
+    gap: 35px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #55534e;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #1d1d1b;
+}
+
+.student-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: #55534e;
+}
+
+.profile-icon {
+    font-size: 20px;
+}
+
+
+/* =========================
+   AUTH SECTION
+   ========================= */
+
+.auth-section {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 7%;
+}
+
+
+/* =========================
+   AUTH CONTAINER
+   ========================= */
+
+.auth-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 470px;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   LEFT INFORMATION
+   ========================= */
+
+.auth-info {
+    max-width: 600px;
+}
+
+.small-heading {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #77736c;
+
+    margin-bottom: 22px;
+}
+
+.auth-info h1 {
+    font-size: clamp(45px, 5vw, 72px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+}
+
+.auth-info > p:not(.small-heading) {
+    max-width: 520px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #66635d;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.auth-features {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.auth-features div {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 14px;
+
+    color: #45433e;
+}
+
+.auth-features span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid #c8c4bb;
+    border-radius: 50%;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   AUTH CARD
+   ========================= */
+
+.auth-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #dedbd4;
+
+    border-radius: 4px;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   LOGIN / REGISTER TOGGLE
+   ========================= */
+
+.auth-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-bottom: 1px solid #dedbd4;
+
+    margin-bottom: 35px;
+}
+
+.auth-tab {
+    border: none;
+    background: transparent;
+
+    padding: 15px 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #99958d;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: color 0.3s ease;
+}
+
+.auth-tab:hover {
+    color: #33312d;
+}
+
+.auth-tab.active {
+    color: #1d1d1b;
+}
+
+.auth-tab.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+    left: 15%;
+    right: 15%;
+
+    height: 2px;
+
+    background: #1d1d1b;
+}
+
+
+/* =========================
+   AUTH FORM
+   ========================= */
+
+.auth-form {
+    width: 100%;
+}
+
+.section-label {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #8a867e;
+
+    margin-bottom: 12px;
+}
+
+.auth-form h2 {
+    font-size: 32px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 10px;
+}
+
+.form-description {
+    font-size: 14px;
+
+    color: #77736c;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   INPUT GROUP
+   ========================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #373530;
+
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d7d3cb;
+
+    border-radius: 3px;
+
+    background: #faf9f7;
+
+    color: #252420;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #aaa69e;
+}
+
+.input-group input:focus {
+    border-color: #77736c;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(100, 96, 88, 0.08);
+}
+
+
+/* =========================
+   FORGOT PASSWORD
+   ========================= */
+
+.forgot-password {
+    text-align: right;
+
+    margin-top: -8px;
+
+    margin-bottom: 25px;
+}
+
+.forgot-password a {
+    font-size: 12px;
+
+    color: #77736c;
+
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #1d1d1b;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MAIN BUTTON
+   ========================= */
+
+.auth-button {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    background: #1d1d1b;
+
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.auth-button:hover {
+    background: #35332f;
+
+    transform: translateY(-1px);
+}
+
+.auth-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SWITCH LOGIN / REGISTER
+   ========================= */
+
+.switch-text {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    color: #77736c;
+}
+
+.switch-text button {
+    border: none;
+
+    background: transparent;
+
+    color: #1d1d1b;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.switch-text button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    width: 100%;
+
+    padding: 35px 7%;
+
+    text-align: center;
+
+    border-top: 1px solid #dedbd4;
+
+    background: #f7f5f0;
+}
+
+.footer-logo {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #77736c;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+footer .copyright {
+    font-size: 11px;
+
+    color: #a09c94;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 950px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        gap: 45px;
+    }
+
+    .auth-info {
+        text-align: center;
+
+        max-width: 600px;
+    }
+
+    .auth-info > p:not(.small-heading) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .auth-features {
+        align-items: center;
+    }
+
+    .auth-section {
+        padding: 60px 6%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px 6%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .header nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .student-profile {
+        margin-left: auto;
+    }
+
+    .auth-section {
+        padding: 45px 5%;
+    }
+
+    .auth-info h1 {
+        font-size: 45px;
+
+        letter-spacing: -1px;
+    }
+
+    .auth-card {
+        padding: 28px 22px;
+    }
+
+    .auth-form h2 {
+        font-size: 27px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .header nav {
+        gap: 12px;
+    }
+
+    .header nav a {
+        font-size: 12px;
+    }
+
+    .auth-info h1 {
+        font-size: 38px;
+    }
+
+    .auth-card {
+        padding: 24px 18px;
+    }
+}
+

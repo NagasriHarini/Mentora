@@ -8,9 +8,36 @@ app = Flask(__name__)
 def home(): 
     return render_template('Main.html')
 
-@app.route('/student')
+
+@app.route("/student")
 def student():
-    return render_template('student.html')
+    return render_template("student.html")
+
+
+@app.route("/student/login", methods=["POST"])
+def student_login():
+
+    email = request.form["email"]
+    password = request.form["password"]
+
+    print("Email:", email)
+    print("Password:", password)
+
+    return "Login successful"
+
+
+@app.route("/student/register", methods=["POST"])
+def student_register():
+
+    name = request.form["name"]
+    email = request.form["email"]
+    password = request.form["password"]
+    confirm_password = request.form["confirm_password"]
+
+    print("Name:", name)
+    print("Email:", email)
+
+    return "Registration successful"
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

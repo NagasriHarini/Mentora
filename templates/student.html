@@ -1,28 +1,341 @@
-<html>
-    <head>
-        <title>Course Registration System</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    </head>
-    <body>
-        <header class="header">
-            <h1>Welcome to the Course Registration System</h1>
-        </header>
-        <div class="container">
-            <div class="card-login">
-            <p>Already have an account?</p>
-            <a href="{{url_for('login')}}">
-                <button>Login</button>
-            </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <p>Don't have an account?</p>
+    <title>Mentora | Student</title>
 
-            <a href="{{url_for('register')}}">
-                <button>Register</button>
-            </a>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style_student_login.css') }}">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            MENTORA
+        </div>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="#login">Login</a>
+            <a href="#register">Register</a>
+        </nav>
+
+    </header>
+
+
+    <!-- AUTHENTICATION SECTION -->
+
+    <section class="auth-section">
+
+        <div class="auth-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="auth-info">
+
+                <p class="small-heading">
+                    STUDENT PORTAL
+                </p>
+
+                <h1>
+                    Start your<br>
+                    learning journey.
+                </h1>
+
+                <p>
+                    Learn smarter with personalized courses,
+                    AI-powered assistance and expert mentors.
+                </p>
+
+                <div class="auth-features">
+
+                    <div>
+                        <span>✦</span>
+                        Personalized learning paths
+                    </div>
+
+                    <div>
+                        <span>✦</span>
+                        AI-powered course assistance
+                    </div>
+
+                    <div>
+                        <span>✦</span>
+                        Connect with expert mentors
+                    </div>
+
+                </div>
+
             </div>
-    </div>
-    </body>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="auth-card">
+
+                <!-- TOGGLE -->
+
+                <div class="auth-toggle">
+
+                    <button
+                        id="loginTab"
+                        class="auth-tab active"
+                        onclick="showLogin()">
+                        Login
+                    </button>
+
+                    <button
+                        id="registerTab"
+                        class="auth-tab"
+                        onclick="showRegister()">
+                        Register
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+
+                <div id="loginForm" class="auth-form">
+
+                    <p class="section-label">
+                        WELCOME BACK
+                    </p>
+
+                    <h2>
+                        Login to Mentora
+                    </h2>
+
+                    <p class="form-description">
+                        Continue your learning journey.
+                    </p>
+
+
+                    <form action="{{ url_for('student_login') }}"
+                          method="POST">
+
+                        <div class="input-group">
+
+                            <label for="login_email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="login_email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="login_password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="login_password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required>
+
+                        </div>
+
+
+                        <div class="forgot-password">
+                            <a href="#">
+                                Forgot password?
+                            </a>
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button">
+                            Login →
+                        </button>
+
+                    </form>
+
+
+                    <p class="switch-text">
+                        Don't have an account?
+                        <button onclick="showRegister()">
+                            Register
+                        </button>
+                    </p>
+
+                </div>
+
+
+                <!-- REGISTER FORM -->
+
+                <div id="registerForm"
+                     class="auth-form"
+                     style="display: none;">
+
+                    <p class="section-label">
+                        JOIN MENTORA
+                    </p>
+
+                    <h2>
+                        Create your account
+                    </h2>
+
+                    <p class="form-description">
+                        Start your personalized learning journey.
+                    </p>
+
+
+                    <form action="{{ url_for('student_register') }}"
+                          method="POST">
+
+                        <div class="input-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="register_email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="register_email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="register_password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="register_password"
+                                name="password"
+                                placeholder="Create a password"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="confirm_password">
+                                Confirm Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirm_password"
+                                name="confirm_password"
+                                placeholder="Confirm your password"
+                                required>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button">
+                            Create Account →
+                        </button>
+
+                    </form>
+
+
+                    <p class="switch-text">
+                        Already have an account?
+                        <button onclick="showLogin()">
+                            Login
+                        </button>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            MENTORA
+        </div>
+
+        <p>
+            Learn • Connect • Achieve
+        </p>
+
+        <p class="copyright">
+            © 2026 Mentora. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function showLogin() {
+
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("registerForm").style.display = "none";
+
+            document.getElementById("loginTab").classList.add("active");
+            document.getElementById("registerTab").classList.remove("active");
+        }
+
+
+        function showRegister() {
+
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registerForm").style.display = "block";
+
+            document.getElementById("loginTab").classList.remove("active");
+            document.getElementById("registerTab").classList.add("active");
+        }
+
+    </script>
+
+</body>
+
 </html>
+```
